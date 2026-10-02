@@ -1,0 +1,409 @@
+============================================================
+HOUSE PRICE PREDICTION USING MULTIPLE LINEAR REGRESSION
+PROJECT STATUS
+============================================================
+
+Date:
+2026-10-01
+
+Student Project:
+AIML Semester 5 Project
+
+============================================================
+1. PROJECT OBJECTIVE
+============================================================
+
+Build a Machine Learning project that predicts house prices
+using Multiple Linear Regression.
+
+Algorithm:
+Multiple Linear Regression
+
+Scikit-learn implementation:
+LinearRegression()
+
+Learning type:
+Supervised Learning
+
+Problem type:
+Regression
+
+
+============================================================
+2. DATASET
+============================================================
+
+Dataset:
+Housing.csv
+
+Location:
+dataset/Housing.csv
+
+Dataset shape:
+545 rows x 13 columns
+
+Target variable:
+price
+
+Input features:
+area
+bedrooms
+bathrooms
+stories
+mainroad
+guestroom
+basement
+hotwaterheating
+airconditioning
+parking
+prefarea
+furnishingstatus
+
+
+============================================================
+3. PROJECT STRUCTURE
+============================================================
+
+HousePriceML/
+|
+|-- dataset/
+|   |-- Housing.csv
+|
+|-- src/
+|   |-- 01_load_dataset.py
+|   |-- 02_eda.py
+|   |-- 03_preprocessing.py
+|   |-- 04_train_model.py
+|
+|-- graphs/
+|   |-- actual_vs_predicted.png
+|   |-- residual_plot.png
+|
+|-- model/
+|   |-- house_price_model.pkl
+|   |-- feature_names.pkl
+|
+|-- test.py
+|
+|-- venv/
+
+
+============================================================
+4. COMPLETED WORK
+============================================================
+
+1. Created project folder.
+2. Created virtual environment.
+3. Installed required Python libraries.
+4. Downloaded and saved Housing.csv.
+5. Verified dataset shape: 545 x 13.
+6. Inspected dataset.
+7. Checked missing values.
+8. Performed Exploratory Data Analysis.
+9. Created Area vs Price scatter plot.
+10. Created correlation matrix.
+11. Created correlation heatmap.
+12. Created Air Conditioning vs Average Price graph.
+13. Created Furnishing Status vs Average Price graph.
+14. Separated features X and target y.
+15. Encoded categorical variables using:
+       pd.get_dummies()
+       drop_first=True
+       dtype=int
+16. Obtained 13 processed input features.
+17. Split data into:
+       80% training
+       20% testing
+18. Training data:
+       436 rows
+19. Testing data:
+       109 rows
+20. Trained Multiple Linear Regression model.
+21. Calculated intercept and coefficients.
+22. Generated predictions.
+23. Evaluated the model.
+24. Created Actual vs Predicted graph.
+25. Created Residual Plot.
+26. Saved trained model.
+27. Saved feature names.
+28. Created test.py for new-house prediction.
+29. Successfully tested prediction with a new house.
+30. Studied how Multiple Linear Regression uses coefficients.
+31. Studied Ordinary Least Squares (OLS).
+32. Studied residuals and squared errors.
+
+
+============================================================
+5. MODEL RESULTS
+============================================================
+
+Training:
+
+Train MAE:
+719242.8936724717
+
+Train RMSE:
+984051.9236507413
+
+Train R²:
+0.6859438988560158
+
+
+Testing:
+
+Test MAE:
+970043.4039201637
+
+Test RMSE:
+1324506.9600914388
+
+Test R²:
+0.6529242642153184
+
+
+Important interpretation:
+
+Test R² is approximately 0.653.
+
+This means the model explains approximately 65.3%
+of the variation in the test-set house prices.
+
+R² is NOT the same as prediction accuracy.
+
+
+============================================================
+6. LEARNED MODEL COEFFICIENTS
+============================================================
+
+Intercept:
+260032.35760741215
+
+area:
+235.96880454139568
+
+bedrooms:
+76778.70163437817
+
+bathrooms:
+1094444.7861005974
+
+stories:
+407476.5949849111
+
+parking:
+224841.91327662626
+
+mainroad_yes:
+367919.94767957245
+
+guestroom_yes:
+231610.03717564975
+
+basement_yes:
+390251.1761810922
+
+hotwaterheating_yes:
+684649.8853387911
+
+airconditioning_yes:
+791426.7358431863
+
+prefarea_yes:
+629890.56531336
+
+furnishingstatus_semi-furnished:
+-126881.81758510822
+
+furnishingstatus_unfurnished:
+-413645.06222822214
+
+
+============================================================
+7. MODEL FILES
+============================================================
+
+model/house_price_model.pkl
+
+Contains the trained Multiple Linear Regression model.
+
+model/feature_names.pkl
+
+Contains the 13 processed feature names and their expected order.
+
+
+============================================================
+8. NEW HOUSE PREDICTION TEST
+============================================================
+
+A test house was entered with:
+
+Area:
+5000
+
+Bedrooms:
+3
+
+Bathrooms:
+2
+
+Stories:
+2
+
+Parking:
+1
+
+Main road:
+yes
+
+Guest room:
+no
+
+Basement:
+yes
+
+Hot water heating:
+no
+
+Air conditioning:
+yes
+
+Preferred area:
+yes
+
+Furnishing:
+semi-furnished
+
+
+Prediction:
+
+₹4,898,897.16
+
+Approximately:
+₹48.99 lakh
+
+
+============================================================
+9. IMPORTANT CONCEPTS UNDERSTOOD
+============================================================
+
+X:
+Input features.
+
+y:
+Target variable.
+
+Supervised Learning:
+Training data contains known input-output examples.
+
+Regression:
+Target is a continuous numerical value.
+
+Multiple Linear Regression:
+Uses multiple input variables to predict one numerical
+continuous target.
+
+Encoding:
+Converts categorical text values into numerical values.
+
+drop_first=True:
+Uses one category as the reference category and avoids
+redundant dummy variables.
+
+Residual:
+Actual value - Predicted value.
+
+OLS:
+Ordinary Least Squares.
+
+OLS finds coefficients that minimize the sum of squared
+residuals.
+
+Training:
+model.fit(X_train, y_train)
+
+Prediction:
+model.predict(X_test)
+
+
+============================================================
+10. CURRENT CHECKPOINT
+============================================================
+
+THE CORE MACHINE LEARNING ALGORITHM IS COMPLETE.
+
+The model successfully trains and predicts house prices.
+
+The new-house prediction system is also working.
+
+Current stage:
+Working ML model / major checkpoint reached.
+
+
+============================================================
+11. REMAINING DEVELOPMENT WORK
+============================================================
+
+NEXT PHASE 1:
+Make the prediction system more robust and professional.
+
+Possible improvements:
+- Input validation
+- Better handling of invalid inputs
+- Better handling of categorical values
+- Ensure prediction input always matches model features
+
+
+NEXT PHASE 2:
+Create a more presentable final demonstration/interface.
+
+
+NEXT PHASE 3:
+Finalize model analysis:
+- Explain MAE
+- Explain MSE
+- Explain RMSE
+- Explain R²
+- Analyze residuals
+- Discuss training vs testing performance
+- Discuss limitations
+
+
+NEXT PHASE 4:
+Prepare complete AIML project documentation/report.
+
+
+NEXT PHASE 5:
+Prepare external viva questions and answers.
+
+
+============================================================
+12. IMPORTANT INSTRUCTION FOR CONTINUATION
+============================================================
+
+Do NOT restart the project from the beginning.
+
+The core project has already been completed up to the
+working Multiple Linear Regression model and new-house
+prediction.
+
+Continue from:
+
+"Robustness / project polishing"
+
+Then proceed to:
+
+1. Final ML validation
+2. Final demonstration/interface
+3. Documentation
+4. Viva preparation
+
+Use very simple step-by-step explanations.
+
+Explain WHY each step is being done before asking the
+student to execute it.
+
+Do not unnecessarily replace working project files.
+
+============================================================
+END OF PROJECT STATUS
+============================================================
